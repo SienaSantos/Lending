@@ -1,0 +1,155 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-logo {
+  background-color: #009184;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.borrow {
+  position: relative;
+  /*top: 50%;*/
+  transform: translateY(50%);
+
+  color: white;
+  font-size: .9em;
+  text-align: right;
+}
+
+.text-borrow {
+  background-color:transparent;
+  border: 1px solid white;
+  border-radius: 2px;
+  width: 120px;
+  padding: 8px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  margin-left: 5px;    /* Opera/IE 8+ */
+}
+
+.btn-borrow {
+  background-color: #343635;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 2px;
+  width: 120px;
+  margin-left: 10px;
+}
+
+.slider-bg {
+  background-image: url("../img/home-slider0.png");
+  /*width: 100%;*/
+  background-size: cover;
+}
+
+.nav {
+  width: 100%;
+  display: block;
+  margin-left: 5%;
+}
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.navbar-default .nav li a{
+  font-family: "Open Sans",sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+/*#services {
+  margin-top: 100px;
+  background-color: #fff;
+}*/
+
+section {
+  padding: 100px 0;
+}
+
+section#services h2.section-heading {
+  text-transform: none;
+  font-weight: lighter;
+  color: #898a88;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 50px;
+  font-size: 4em;
+}
+
+section#services .container {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+section#services h4 {
+  text-transform: none;
+  font-weight: normal;
+  color: #898a88;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8em;
+}
+
+section#services p {
+  text-transform: none;
+  font-weight: normal;
+  color: #898a88;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8em;
+  line-height: 1.3em;
+}
+
+section#services .btn-xl {
+  color: #fff;
+  background-color: #f23844;
+  border-color: #f23844;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 15px 40px;
+  width: 300px;
+  margin-top: 20px;
+}
+
+.team-member {
+  border: 0;
+  margin-bottom: 0;
+}
+
+section#portfolio {
+  background-image: url("../img/invest.png");
+  /*width: 100%;*/
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+section#portfolio h2.section-heading {
+  text-transform: none;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 15px;
+  font-size: 3em;
+}
+
+section#portfolio h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: lighter;
+  font-size: 1.5em;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+::selection {
+  background-color: #fff;
+}
