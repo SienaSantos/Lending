@@ -1,0 +1,69 @@
+.navbar-logo {
+  background-color: #009184;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.borrow {
+  position: relative;
+  /*top: 50%;*/
+  transform: translateY(50%);
+
+  color: white;
+  font-size: .9em;
+  text-align: right;
+}
+
+.text-borrow {
+  background-color:transparent;
+  border: 1px solid white;
+  border-radius: 2px;
+  width: 120px;
+  padding: 8px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  margin-left: 5px;    /* Opera/IE 8+ */
+}
+
+.btn-borrow {
+  background-color: #343635;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 2px;
+  width: 120px;
+  margin-left: 10px;
+}
+
+.slider-bg {
+  background-image: url("../img/home-slider0.png");
+  /*width: 100%;*/
+  background-size: cover;
+}
+
+.navbar-menu {
+  background-color: transparent;
+  margin-top: 10px;
+}
+
+.navbar-menu ul {
+  list-style: none;
+}
+
+.navbar-menu li {
+  font-size: 1.2em;
+
+}
+
+.navbar-menu li a {
+  font-weight: 400;
+  /*letter-spacing: 1px;*/
+  color: #fff;
+  text-decoration: none;
+}
+
+::selection {
+  background-color: #fff;
+}
