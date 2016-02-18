@@ -86,6 +86,25 @@ section#services h2.section-heading {
   font-size: 4em;
 }
 
+section#services h3.section-heading {
+  text-transform: none;
+  font-weight: lighter;
+  color: #898a88;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 30px;
+  font-size: 2.3em;
+}
+
+section#services h3.section-subheading {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 1.5em;
+  font-style: normal;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-style: normal;
+}
+
 section#services .container {
   padding-left: 100px;
   padding-right: 100px;
@@ -99,6 +118,29 @@ section#services h4 {
   font-size: 1.8em;
 }
 
+section#services h5 {
+  text-transform: none;
+  font-weight: normal;
+  color: #898a88;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+}
+
+section#services h6 {
+  text-transform: none;
+  font-weight: normal;
+  color: #898a88;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2em;
+  font-size: 1em;
+}
+
+.vertical-align {
+  position: relative;
+/* top: 50%; */
+transform: translateY(150%);
+}
+
 section#services p {
   text-transform: none;
   font-weight: normal;
@@ -108,6 +150,35 @@ section#services p {
   line-height: 1.3em;
 }
 
+section#services span {
+  text-transform: none;
+  font-weight: lighter;;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  vertical-align: middle;
+}
+
+section#services ul {
+  list-style-type: square;
+}
+
+section#services li:before {
+  content: "";
+  background-color: #197b81;
+}
+
+section#services li {
+  text-transform: none;
+  font-weight: lighter;;
+  color: #898a88;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  vertical-align: middle;
+}
+
 section#services .btn-xl {
   color: #fff;
   background-color: #f23844;
@@ -115,10 +186,11 @@ section#services .btn-xl {
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 3px;
-  font-size: 15px;
+  font-size: 18px;
   padding: 15px 40px;
   width: 300px;
   margin-top: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .team-member {
@@ -144,11 +216,51 @@ section#portfolio h2.section-heading {
 
 section#portfolio h3 {
   font-family: 'Open Sans', sans-serif;
-  font-style: lighter;
+  font-weight: lighter;
   font-size: 1.5em;
   font-style: normal;
   letter-spacing: 1px;
+  margin-bottom: 20px;
 }
+
+section#portfolio img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section#portfolio .btn-xl {
+  color: #fff;
+  background-color: #f23844;
+  border-color: #f23844;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 20px;
+  padding: 15px 40px;
+  width: 280px;
+  margin-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+  background-color: #343635;
+}
+
+footer span.copyright {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 1.2em;
+  font-style: normal;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+ul.social-button{margin-bottom:0}
+ul.social-button li a{display:block;height:40px;width:20px;font-size:20px;line-height:40px;color:#fff;outline:0;-webkit-transition:all .3s;-moz-transition:all .3s;transition:all .3s}
+ul.social-button li a:hover,ul.social-buttons li a:focus,ul.social-buttons li a:active{background-color:#fed136}
 
 ::selection {
   background-color: #fff;
