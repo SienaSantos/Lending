@@ -19,6 +19,10 @@ body {
   text-align: right;
 }
 
+.fa:hover{
+    color : #00918D !important;
+}
+
 .text-borrow {
   background-color:transparent;
   border: 1px solid white;
@@ -192,7 +196,7 @@ section#services li {
 section#services .btn-xl {
   color: #fff;
   background-color: #f23844;
-  border-color: #f23844;
+  border: 2px #f23844 solid;
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 3px;
@@ -201,6 +205,11 @@ section#services .btn-xl {
   width: 300px;
   margin-top: 20px;
   font-family: 'Open Sans', sans-serif;
+}
+
+.btn-xl:hover{
+  background-color: #f23844;
+  opacity: 0.8;
 }
 
 .team-member {
@@ -268,9 +277,18 @@ footer span.copyright {
   text-transform: uppercase;
 }
 
-ul.social-button{margin-bottom:0}
+.social{
+  color: #fff;
+  font-size: 25px;
+}
+
+.social-button{
+  margin-left: 20px;
+}
+
+/*ul.social-button{margin-bottom:0}
 ul.social-button li a{display:block;height:40px;width:20px;font-size:20px;line-height:40px;color:#fff;outline:0;-webkit-transition:all .3s;-moz-transition:all .3s;transition:all .3s}
-ul.social-button li a:hover,ul.social-buttons li a:focus,ul.social-buttons li a:active{background-color:#fed136}
+ul.social-button li a:hover,ul.social-buttons li a:focus,ul.social-buttons li a:active{background-color:#fed136}*/
 
 ::selection {
   background-color: #fff;
