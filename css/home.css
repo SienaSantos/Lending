@@ -41,6 +41,16 @@ body {
   margin-left: 10px;
 }
 
+.btn-sign {
+  background-color: #343635;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 2px;
+  width: 100px;
+  margin-left: 10px;
+}
+
 .slider-bg {
   background-image: url("../img/home-slider0.png");
   /*width: 100%;*/
