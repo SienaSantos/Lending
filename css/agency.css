@@ -140,3 +140,15 @@ ul.social-buttons li a:hover,ul.social-buttons li a:focus,ul.social-buttons li a
 img::selection{background:0 0}
 img::-moz-selection{background:0 0}
 body{webkit-tap-highlight-color:#fed136}
+
+.btn-sign:hover{
+  color: #343635;
+  background-color: transparent;
+  border: 1px solid #343635;
+}
+
+.btn-borrow:hover{
+  color: #343635;
+  background-color: transparent;
+  border: 1px solid #343635;
+}
