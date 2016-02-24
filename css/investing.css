@@ -119,6 +119,15 @@ body{
   border-bottom: 2px solid #eee;
   padding-bottom: 15px;
 }
+#rowhead2{
+  padding-bottom: 15px;
+}
+
+#rowhead2 h3{
+  color: #00918D;
+  text-transform: none !important;
+  font-family: 'Open Sans',sans-serif !important;
+}
 
 #rowhead h3{
   color: #00918D;
@@ -142,6 +151,11 @@ body{
   margin-top: 25px;
 }
 
+#rowcontent2{
+  margin-top: 15px;
+}
+
+
 #rowcontent h4{
   color: #898a88;
   text-transform: none !important;
@@ -151,6 +165,10 @@ body{
 .whatwedo{
   list-style-type: square;
   font-size: 15px;
+}
+
+.whatwedo li{
+  margin-bottom: 20px;
 }
 
 #aboutus p{
@@ -342,77 +360,37 @@ section#services li {
   vertical-align: middle;
 }
 
-.btnCheck {
+.btnInvest {
   color: #fff;
   background-color: #f23844;
-  border-color: #f23844;
-  font-weight: 400;
-  border-radius: 3px;
-  font-size: 17px;
-  padding: 9px;
-  width: 300px;
+  border: 1px solid #f23844;
   margin-top: 20px;
+  padding: 6px 16px;
+  border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
 }
 
-.btnCheck:hover {
+.btnInvest:hover {
   color: #f23844;
   background-color: transparent;
   border-color: #f23844;
 }
 
-.btnWont {
+.btnRetire {
   color: #fff;
-  background-color: #727270;
-  border-color: #727270;
-  font-weight: 400;
-  border-radius: 3px;
-  font-size: 17px;
-  padding: 9px;
-  width: 300px;
-  margin-top: 10px;
+  background-color: #A9AAAC;
+  border: 1px solid #A9AAAC;
+  margin-top: 20px;
+  padding: 6px 16px;
+  border-radius: 5px;
+  margin-left: 22px;
   font-family: 'Open Sans', sans-serif;
 }
 
-.btnWont:hover {
-  color: #fff;
-  background-color: #7a7a79;
-  border-color: #7a7a79;
-}
-
-.hvr-bubble-top {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-
-}
-
-.hvr-bubble-top:before {
-  pointer-events: none;
-  position: absolute;
-  z-index: -1;
-  content: '';
-  border-style: solid;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  left: calc(50% - 10px);
-  top: 0;
-  border-width: 0 10px 10px 10px;
-  border-color: transparent transparent transparent transparent;
-
-}
-.hvr-bubble-top:hover:before, .hvr-bubble-top:focus:before, .hvr-bubble-top:active:before {
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-10px);
-  border-color: transparent transparent #7a7a79 transparent;
+.btnRetire:hover {
+  color: #696969;
+  background-color: transparent;
+  border-color: #696969;
 }
 
 .team-member {
