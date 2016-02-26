@@ -33,6 +33,11 @@
 
 }
 
+.btnSignup:hover{
+  background-color: transparent;
+  color: #00918D;
+}
+
 .row h2{
   color: black;
   text-transform: none !important;
