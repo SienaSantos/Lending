@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
+.upper{
+  border: 1px solid;
+}
+
+.container{
+  border: 1px solid;
+}
+#banner{
+  background-color: #00918D;
+}
+
+.txtSignup{
+  width: 100%;
+  border: 0px;
+  border-bottom: 1px #696969 solid;
+  font-family: 'Open Sans',sans-serif !important;
+  margin-bottom: 20px;
+  color: #696969;
+}
+
+.btnSignup{
+  width: 100%;
+  border-radius: 5px;
+  background-color: #00918D;
+  color: #fff;
+  border: 1px #00918D solid;
+  text-align: center;
+  font-family: 'Open Sans',sans-serif !important;
+  padding: 12px;
+
+}
+
+.row h2{
+  color: black;
+  text-transform: none !important;
+  font-family: 'Open Sans',sans-serif !important;
+  text-align: center;
+  margin: 50px;
+}
+
+#rowhead h4{
+  color: #00918D;
+  text-transform: none !important;
+  font-family: 'Open Sans',sans-serif !important;
+  font-weight: 400;
+}
+.middle{
+  margin: 20px;
+}
+
+.btnn{
+  margin: 20px;
+}
+
+.link{
+  color: #222;
+  text-transform: none !important;
+  font-family: 'Open Sans',sans-serif !important;
+  font-weight: 400;
+}
+
+.link:hover{
+  color: #00918D;
+}
