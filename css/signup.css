@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
-.upper{
+/*.upper{
   border: 1px solid;
 }
 
 .container{
   border: 1px solid;
-}
+}*/
 #banner{
   background-color: #00918D;
 }
@@ -28,6 +28,8 @@
   text-align: center;
   font-family: 'Open Sans',sans-serif !important;
   padding: 12px;
+  font-size: 16px;
+  font-weight: 300;
 
 }
 
@@ -37,6 +39,9 @@
   font-family: 'Open Sans',sans-serif !important;
   text-align: center;
   margin: 50px;
+  font-weight: 400;
+  font-size: 31px;
+
 }
 
 #rowhead h4{
@@ -58,6 +63,7 @@
   text-transform: none !important;
   font-family: 'Open Sans',sans-serif !important;
   font-weight: 400;
+  font-size: 15px;
 }
 
 .link:hover{
