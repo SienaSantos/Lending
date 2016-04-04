@@ -40,27 +40,27 @@ input[type="text"][disabled] {
 	color: gray;
 }
 
-#user_birth_month, #phone_number {
+#user_birth_month, #phone_number, #comaker_birth_month {
 	width: 120px !important;
 	display: inline-block !important;
 }
 
-#user_birth_day, #user_age {
+#user_birth_day, #user_age, #comaker_birth_day, #comaker_age {
 	width: 50px !important;
 	display: inline-block !important;
 }
 
-#user_birth_year {
+#user_birth_year, #comaker_birth_year {
 	width: 70px !important;
 	display: inline-block !important;
 }
 
-#user_sex {
+#user_gender, #comaker_gender{
 	width: 80px !important;
 	display: inline-block !important;
 }
 
- #user_profile_info_tin, #user_profile_info_sss {
+ #user_profile_info_tin, #user_profile_info_sss, #comaker_profile_info_tin, #comaker_profile_info_sss {
 	width: 200px !important;
 	display: inline-block !important;
 }
