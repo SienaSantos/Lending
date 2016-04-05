@@ -510,9 +510,9 @@
                       </div>
                     </div>
                   </div>
-                  <!--End of Personal Information-->
+                  <!--End of Bank Accounts-->
 
-                  <!--Co-maker Information-->
+                  <!--Credit References-->
                   <div class="panel space-4">
                     <div class="panel-header">
                       Credit References
@@ -548,41 +548,293 @@
                       </div>
                     </div>
                   </div>
-                  <!--End of Co-maker Information-->
+                  <!--End of Credit References-->
 
-                  <!--Employment Information-->
+                  <!--Trade & Other References-->
                   <div class="panel space-4">
                     <div class="panel-header">
-                      Employment/Business Information
+                      Trade & Other References
                     </div>
                     <div class="panel-body">
                       <div class="row row-condensed space-4">
-                        <label class="text-right col-sm-3" for="company_profile_info_name">
-                          Employer/Business Name
-                        </label>
-                        <div class="col-sm-9">
-                          <input id="company_profile_info_name" name="company_profile_info[name]" size="30" type="text" value="" disabled>
-                        </div>
-                      </div>
-                      <div class="row row-condensed space-4">
-                        <label class="text-right col-sm-3" for="company_profile_info_position">
-                          Position
-                        </label>
-                        <div class="col-sm-9">
-                          <input id="company_profile_info_position" name="company_profile_info[position]" size="30" type="text" value="" disabled>
-                        </div>
-                      </div>
-                      <div class="row row-condensed space-4">
-                        <label class="text-right col-sm-3" for="company_profile_info_address">
-                          Office Address <i class="icon icon-lock icon-ebisu" data-behavior="tooltip" aria-label="Private"></i>
-                        </label>
-                        <div class="col-sm-9">
-                          <input id="company_profile_info_address" name="company_profile_info[address]" size="30" type="text" disabled>
-                        </div>
+                        <table id="tradeCustTable" class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Customer Name</th>
+                              <th>Address</th>
+                              <th>Telephone</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input id="user_trade_cust_name" name="user[trade_cust_name]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_cust_add" name="user[trade_cust_add]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_cust_tel" name="user[trade_cust_tel]" size="30" type="text" value=""></td>
+                            </tr>
+                            <tr>
+                              <td><input id="user_trade_cust_name" name="user[trade_cust_name]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_cust_add" name="user[trade_cust_add]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_cust_tel" name="user[trade_cust_tel]" size="30" type="text" value=""></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <button id="btnAddTradeCustRow" class="btn btn-primary">
+                          Add Row
+                        </button>
+                        <br>
+                        <script>
+                        $("#btnAddTradeCustRow").click(function () {
+                          $("#tradeCustTable").append('<tr><td><input id="user_trade_cust_name" name="user[trade_cust_name]" size="30" type="text" value=""></td><td><input id="user_trade_cust_add" name="user[trade_cust_add]" size="30" type="text" value=""></td><td><input id="user_trade_cust_tel" name="user[trade_cust_tel]" size="30" type="text" value=""></td></tr>');
+                        });
+                        </script>
+                        <br>
+                        <table id="tradeSuppTable" class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Supplier Name</th>
+                              <th>Address</th>
+                              <th>Telephone</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input id="user_trade_supp_name" name="user[trade_supp_name]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_supp_add" name="user[trade_supp_add]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_supp_tel" name="user[trade_supp_tel]" size="30" type="text" value=""></td>
+                            </tr>
+                            <tr>
+                              <td><input id="user_trade_supp_name" name="user[trade_supp_name]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_supp_add" name="user[trade_supp_add]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_supp_tel" name="user[trade_supp_tel]" size="30" type="text" value=""></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <button id="btnAddTradeSuppRow" class="btn btn-primary">
+                          Add Row
+                        </button>
+                        <script>
+                        $("#btnAddTradeSuppRow").click(function () {
+                          $("#tradeSuppTable").append('<tr><td><input id="user_trade_supp_name" name="user[trade_supp_name]" size="30" type="text" value=""></td><td><input id="user_trade_supp_add" name="user[trade_supp_add]" size="30" type="text" value=""></td><td><input id="user_trade_supp_tel" name="user[trade_supp_tel]" size="30" type="text" value=""></td></tr>');
+                        });
+                        </script>
                       </div>
                     </div>
                   </div>
-                  <!--End of Employment Information-->
+                  <!--End of Trade & Other References-->
+
+                  <!--Monthly Income & Expense Summary-->
+                  <div class="panel space-4">
+                    <div class="panel-header">
+                      Monthly Income & Expense Summary
+                    </div>
+                    <div class="panel-body">
+                      <div class="row row-condensed space-4">
+                        <!--Monthlu Income-->
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>MONTHLY INCOME</th>
+                              <th>Business</th>
+                              <th>Employment</th>
+                              <th>Total</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Applicant's Monthly Income</td>
+                              <td><input id="user_app_inc_bus" name="user[app_inc_bus]" onkeyup="sumTotalIncome()" type="text" value="0"></td>
+                              <td><input id="user_app_inc_emp" name="user[app_inc_emp]" onkeyup="sumTotalIncome()" type="text" value="0"></td>
+                              <td><input id="user_app_inc_total" name="user[app_inc_total]" size="30" type="text" value="0" disabled></td>
+                            </tr>
+                            <tr>
+                              <td>Spouse's Monthly Income</td>
+                              <td><input id="user_spouse_inc_bus" name="user[spouse_inc_bus]" onkeyup="sumTotalIncome()" type="text" value="0"></td>
+                              <td><input id="user_spouse_inc_emp" name="user[spouse_inc_emp]" onkeyup="sumTotalIncome()" type="text" value="0"></td>
+                              <td><input id="user_spouse_inc_total" name="user[spouse_inc_total]" size="30" type="text" value="0" disabled></td>
+                            </tr>
+                            <tr>
+                              <td>Other Monthly Income</td>
+                              <td><input id="user_other_inc_bus" name="user[other_inc_bus]" onkeyup="sumTotalIncome()" type="text" value="0"></td>
+                              <td><input id="user_other_inc_emp" name="user[other_inc_emp]" onkeyup="sumTotalIncome()" type="text" value="0"></td>
+                              <td><input id="user_other_inc_total" name="user[other_inc_total]" size="30" type="text" value="0" disabled></td>
+                            </tr>
+                            <tr>
+                              <td colspan="3"><strong>Total Monthly Income</strong></td>
+                              <td><input id="user_total_income" name="user[total_income]" size="30" type="text" value="0" disabled></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!--End of Monhtly Income-->
+                        <br>
+                        <!--Monthly Expense-->
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th colspan="2">MONTHLY Expenses</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Monthly Expenses (Living, Utilities, Rental, Transport)</td>
+                              <td><input id="user_monthly_expense" name="user[monthly_expense]" onkeyup="sumTotalIncome()" type="text" value="0"></td>
+                            </tr>
+                            <tr>
+                              <td>Loan Amortizations (Mortgages, Loans)</td>
+                              <td><input id="user_loan_amortization" name="user[loan_amortization]" onkeyup="sumTotalIncome()" type="text" value="0"></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Total Monthly Expense</strong></td>
+                              <td><input id="user_total_expense" name="user[total_expense]" size="30" type="text" value="0" disabled></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!--End of Monthly Expense-->
+                        <br>
+                        <!--Net Monthly Income-->
+                        <table class="table" style="border:1px solid #ddd">
+                          <thead>
+                            <tr>
+                              <th colspan="8">NET MONTHLY INCOME</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td colspan="2">Total Monthly Income</td>
+                              <td><sub>LESS</sub></td>
+                              <td colspan="2">Total Expenses</td>
+                              <td><sub>EQUALS</sub></td>
+                              <td colspan="2">Net Monthly Income</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2"><input id="user_total_income_net" name="user[total_income_net]" size="30" type="text" value="0" disabled></td>
+                              <td><sub>LESS</sub></td>
+                              <td colspan="2"><input id="user_total_expense_net" name="user[total_expense_net]" size="30" type="text" value="0" disabled></td>
+                              <td><sub>EQUALS</sub></td>
+                              <td colspan="2"><input id="user_net_income" name="user[net_income]" size="30" type="text" value="0" disabled></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!--End of Net Monthly Income-->
+                        <script>
+                          function sumTotalIncome() {
+                              var txtApplicantBusiness = document.getElementById('user_app_inc_bus').value;
+                              var txtApplicantEmployment = document.getElementById('user_app_inc_emp').value;
+                              var txtSpouseBusiness = document.getElementById('user_spouse_inc_bus').value;
+                              var txtSpouseEmployment = document.getElementById('user_spouse_inc_emp').value;
+                              var txtOtherBusiness = document.getElementById('user_other_inc_bus').value;
+                              var txtOtherEmployment = document.getElementById('user_other_inc_emp').value;
+                              var txtMonthlyExpense = document.getElementById('user_monthly_expense').value;
+                              var txtLoanAmortization = document.getElementById('user_loan_amortization').value;
+                              if (txtApplicantBusiness=="") {
+                                txtApplicantBusiness = 0;
+                              }
+                              else if (txtApplicantEmployment=="") {
+                                txtApplicantEmployment = 0;
+                              }
+                              else if (txtSpouseBusiness=="") {
+                                txtSpouseBusiness = 0;
+                              }
+                              else if (txtSpouseEmployment=="") {
+                                txtSpouseEmployment = 0;
+                              }
+                              else if (txtOtherBusiness=="") {
+                                txtOtherBusiness = 0;
+                              }
+                              else if (txtOtherEmployment=="") {
+                                txtOtherEmployment = 0;
+                              }
+                              else if (txtMonthlyExpense=="") {
+                                txtMonthlyExpense = 0;
+                              }
+                              else if (txtLoanAmortization=="") {
+                                txtLoanAmortization = 0;
+                              }
+                              else if (txtApplicantBusiness == "" && txtApplicantEmployment == "") {
+                                document.getElementById('user_app_inc_total').value = 0;
+                              }
+                              else if (txtSpouseBusiness == "" && txtSpouseEmployment == "") {
+                                document.getElementById('user_spouse_inc_total').value = 0;
+                              }
+                              else if (txtOtherBusiness == "" && txtOtherEmployment == "") {
+                                document.getElementById('user_other_inc_total').value = 0;
+                              }
+                              else if (txtMonthlyExpense == "" && txtLoanAmortization == "") {
+                                document.getElementById('user_total_expense').value = 0;
+                              }
+                              var resultAppTotal = parseInt(txtApplicantBusiness) + parseInt(txtApplicantEmployment);
+                              if (!isNaN(resultAppTotal)) {
+                                  document.getElementById('user_app_inc_total').value = resultAppTotal;
+                              }
+                              var resultSpouseTotal = parseInt(txtSpouseBusiness) + parseInt(txtSpouseEmployment);
+                              if (!isNaN(resultSpouseTotal)) {
+                                  document.getElementById('user_spouse_inc_total').value = resultSpouseTotal;
+                              }
+                              var resultOtherTotal = parseInt(txtOtherBusiness) + parseInt(txtOtherEmployment);
+                              if (!isNaN(resultOtherTotal)) {
+                                  document.getElementById('user_other_inc_total').value = resultOtherTotal;
+                              }
+                              var resultTotalIncome = parseInt(txtApplicantBusiness) + parseInt(txtApplicantEmployment) + parseInt(txtSpouseBusiness) + parseInt(txtSpouseEmployment) + parseInt(txtOtherBusiness) + parseInt(txtOtherEmployment);
+                              if (!isNaN(resultTotalIncome)) {
+                                  document.getElementById('user_total_income').value = resultTotalIncome;
+                                  document.getElementById('user_total_income_net').value = resultTotalIncome;
+                              }
+                              var resultTotalExpense = parseInt(txtMonthlyExpense) + parseInt(txtLoanAmortization);
+                              if (!isNaN(resultTotalExpense)) {
+                                  document.getElementById('user_total_expense').value = resultTotalExpense;
+                                  document.getElementById('user_total_expense_net').value = resultTotalExpense;
+                              }
+                              var resultNetIncome = parseInt(resultTotalIncome) - parseInt(resultTotalExpense);
+                              if (!isNaN(resultNetIncome)) {
+                                  document.getElementById('user_net_income').value = resultNetIncome;
+                              }
+                          }
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End of Monthly Income & Expense Summary-->
+
+                  <!--Assets-->
+                  <div class="panel space-4">
+                    <div class="panel-header">
+                      Assets
+                    </div>
+                    <div class="panel-body">
+                      <div class="row row-condensed space-4">
+                        <table id="assetsTable" class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Other Assets Aside from Colla</th>
+                              <th>Address</th>
+                              <th>Telephone</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input id="user_trade_cust_name" name="user[trade_cust_name]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_cust_add" name="user[trade_cust_add]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_cust_tel" name="user[trade_cust_tel]" size="30" type="text" value=""></td>
+                            </tr>
+                            <tr>
+                              <td><input id="user_trade_cust_name" name="user[trade_cust_name]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_cust_add" name="user[trade_cust_add]" size="30" type="text" value=""></td>
+                              <td><input id="user_trade_cust_tel" name="user[trade_cust_tel]" size="30" type="text" value=""></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <button id="btnAddTradeCustRow" class="btn btn-primary">
+                          Add Row
+                        </button>
+                        <br>
+                        <script>
+                        $("#btnAddTradeCustRow").click(function () {
+                          $("#tradeCustTable").append('<tr><td><input id="user_trade_cust_name" name="user[trade_cust_name]" size="30" type="text" value=""></td><td><input id="user_trade_cust_add" name="user[trade_cust_add]" size="30" type="text" value=""></td><td><input id="user_trade_cust_tel" name="user[trade_cust_tel]" size="30" type="text" value=""></td></tr>');
+                        });
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End of Assets-->
                 </div>
                 <!--Toggle Buttons-->
                 <div>
