@@ -74,12 +74,12 @@
 
       <!--Login/Signup-->
       <div class="comp pull-right show-logout">
-        <a data-login-modal="" href="/login" data-redirect="redirect_params[action]=edit&amp;redirect_params[controller]=users" class="hdr-btn link-reset">
+        <a data-login-modal="" href="/login" data-redirect="redirect_params[action]=editandamp;redirect_params[controller]=users" class="hdr-btn link-reset">
           Log In
         </a>
       </div>
       <div class="comp pull-right show-logout">
-        <a data-signup-modal="" data-header-view="true" href="/signup_login" data-redirect="redirect_params[action]=edit&amp;redirect_params[controller]=users" class="hdr-btn link-reset">
+        <a data-signup-modal="" data-header-view="true" href="/signup_login" data-redirect="redirect_params[action]=editandamp;redirect_params[controller]=users" class="hdr-btn link-reset">
           Sign Up
         </a>
       </div>
@@ -90,7 +90,7 @@
         <div class="comp pull-right no-border help-trigger-wrapper" data-reactid=".7">
           <a class="hdr-btn js-help-toggle link-reset needsclick" href="/help" data-reactid=".7.0">
             <span class="margin-right--tiny hide-md" data-reactid=".7.0.0">Help</span>
-            <span data-reactid=".7.0.1">&nbsp;</span>
+            <span data-reactid=".7.0.1">andnbsp;</span>
             <i class="header-icon icon-lifesaver-alt-gray" data-reactid=".7.0.2"></i>
           </a>
         </div>
@@ -512,6 +512,69 @@
                   </div>
                   <!--End of Bank Accounts-->
 
+                  <!--Credit Accounts-->
+                  <div class="panel space-4">
+                    <div class="panel-header">
+                      Credit Card Details
+                    </div>
+                    <div class="panel-body">
+                      <div class="row row-condensed space-4">
+                        <label class="text-right col-sm-3" for="user_bank_account">
+                          Do you have a credit card?
+                        </label>
+                        <div class="col-sm-9">
+                          <div>
+                            <div class="col-xs-6">
+                              <input type="radio" name="user_credit_card" id="user_credit_card" value="Yes">Yes
+                            </div>
+                            <div class="col-xs-6">
+                              <input type="radio" name="user_credit_card" id="user_credit_card">No
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="Yes" class="credit_card">
+                        <div id="credit_account">
+                          <div class="row row-condensed space-4">
+                            <label class="text-right col-sm-3" for="user_credit_card_bank">
+                              Issued by
+                            </label>
+                            <div class="col-sm-9">
+                              <div>
+                                <input id="user_credit_card_bank" name="user[credit_card_bank]" size="30" type="text" value="" placeholder="Bank Name">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <script>
+                        $(document).ready(function() {
+                          $("div.credit_card").hide();
+                          $("input[name$='user_credit_card']").click(function() {
+                              var test = $(this).val();
+                              $("div.credit_card").hide();
+                              $("#" + test).show();
+                          });
+                        });
+                        </script>
+                        <div class="row row-condensed space-4">
+                          <label class="text-right col-sm-3">
+                          </label>
+                          <div class="col-sm-9">
+                            <button id="btnAddCreditCardBank" class="btn btn-primary">
+                              Add Bank
+                            </button>
+                            <script>
+                            $("#btnAddCreditCardBank").click(function () {
+                              $("#credit_account").append('<div class="row row-condensed space-4"><label class="text-right col-sm-3" for="user_credit_card_bank">Issued by</label><div class="col-sm-9"><div><input id="user_credit_card_bank" name="user[credit_card_bank]" size="30" type="text" value="" placeholder="Bank Name"></div></div></div>');
+                            });
+                            </script>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End of Credit Accounts-->
+
                   <!--Credit References-->
                   <div class="panel space-4">
                     <div class="panel-header">
@@ -550,10 +613,10 @@
                   </div>
                   <!--End of Credit References-->
 
-                  <!--Trade & Other References-->
+                  <!--Trade and Other References-->
                   <div class="panel space-4">
                     <div class="panel-header">
-                      Trade & Other References
+                      Trade and Other References
                     </div>
                     <div class="panel-body">
                       <div class="row row-condensed space-4">
@@ -620,12 +683,12 @@
                       </div>
                     </div>
                   </div>
-                  <!--End of Trade & Other References-->
+                  <!--End of Trade and Other References-->
 
-                  <!--Monthly Income & Expense Summary-->
+                  <!--Monthly Income and Expense Summary-->
                   <div class="panel space-4">
                     <div class="panel-header">
-                      Monthly Income & Expense Summary
+                      Monthly Income and Expense Summary
                     </div>
                     <div class="panel-body">
                       <div class="row row-condensed space-4">
@@ -715,84 +778,11 @@
                           </tbody>
                         </table>
                         <!--End of Net Monthly Income-->
-                        <script>
-                          function sumTotalIncome() {
-                              var txtApplicantBusiness = document.getElementById('user_app_inc_bus').value;
-                              var txtApplicantEmployment = document.getElementById('user_app_inc_emp').value;
-                              var txtSpouseBusiness = document.getElementById('user_spouse_inc_bus').value;
-                              var txtSpouseEmployment = document.getElementById('user_spouse_inc_emp').value;
-                              var txtOtherBusiness = document.getElementById('user_other_inc_bus').value;
-                              var txtOtherEmployment = document.getElementById('user_other_inc_emp').value;
-                              var txtMonthlyExpense = document.getElementById('user_monthly_expense').value;
-                              var txtLoanAmortization = document.getElementById('user_loan_amortization').value;
-                              if (txtApplicantBusiness=="") {
-                                txtApplicantBusiness = 0;
-                              }
-                              else if (txtApplicantEmployment=="") {
-                                txtApplicantEmployment = 0;
-                              }
-                              else if (txtSpouseBusiness=="") {
-                                txtSpouseBusiness = 0;
-                              }
-                              else if (txtSpouseEmployment=="") {
-                                txtSpouseEmployment = 0;
-                              }
-                              else if (txtOtherBusiness=="") {
-                                txtOtherBusiness = 0;
-                              }
-                              else if (txtOtherEmployment=="") {
-                                txtOtherEmployment = 0;
-                              }
-                              else if (txtMonthlyExpense=="") {
-                                txtMonthlyExpense = 0;
-                              }
-                              else if (txtLoanAmortization=="") {
-                                txtLoanAmortization = 0;
-                              }
-                              else if (txtApplicantBusiness == "" && txtApplicantEmployment == "") {
-                                document.getElementById('user_app_inc_total').value = 0;
-                              }
-                              else if (txtSpouseBusiness == "" && txtSpouseEmployment == "") {
-                                document.getElementById('user_spouse_inc_total').value = 0;
-                              }
-                              else if (txtOtherBusiness == "" && txtOtherEmployment == "") {
-                                document.getElementById('user_other_inc_total').value = 0;
-                              }
-                              else if (txtMonthlyExpense == "" && txtLoanAmortization == "") {
-                                document.getElementById('user_total_expense').value = 0;
-                              }
-                              var resultAppTotal = parseInt(txtApplicantBusiness) + parseInt(txtApplicantEmployment);
-                              if (!isNaN(resultAppTotal)) {
-                                  document.getElementById('user_app_inc_total').value = resultAppTotal;
-                              }
-                              var resultSpouseTotal = parseInt(txtSpouseBusiness) + parseInt(txtSpouseEmployment);
-                              if (!isNaN(resultSpouseTotal)) {
-                                  document.getElementById('user_spouse_inc_total').value = resultSpouseTotal;
-                              }
-                              var resultOtherTotal = parseInt(txtOtherBusiness) + parseInt(txtOtherEmployment);
-                              if (!isNaN(resultOtherTotal)) {
-                                  document.getElementById('user_other_inc_total').value = resultOtherTotal;
-                              }
-                              var resultTotalIncome = parseInt(txtApplicantBusiness) + parseInt(txtApplicantEmployment) + parseInt(txtSpouseBusiness) + parseInt(txtSpouseEmployment) + parseInt(txtOtherBusiness) + parseInt(txtOtherEmployment);
-                              if (!isNaN(resultTotalIncome)) {
-                                  document.getElementById('user_total_income').value = resultTotalIncome;
-                                  document.getElementById('user_total_income_net').value = resultTotalIncome;
-                              }
-                              var resultTotalExpense = parseInt(txtMonthlyExpense) + parseInt(txtLoanAmortization);
-                              if (!isNaN(resultTotalExpense)) {
-                                  document.getElementById('user_total_expense').value = resultTotalExpense;
-                                  document.getElementById('user_total_expense_net').value = resultTotalExpense;
-                              }
-                              var resultNetIncome = parseInt(resultTotalIncome) - parseInt(resultTotalExpense);
-                              if (!isNaN(resultNetIncome)) {
-                                  document.getElementById('user_net_income').value = resultNetIncome;
-                              }
-                          }
-                        </script>
+
                       </div>
                     </div>
                   </div>
-                  <!--End of Monthly Income & Expense Summary-->
+                  <!--End of Monthly Income and Expense Summary-->
 
                   <!--Assets-->
                   <div class="panel space-4">
@@ -804,31 +794,26 @@
                         <table id="assetsTable" class="table table-bordered">
                           <thead>
                             <tr>
-                              <th>Other Assets Aside from Colla</th>
-                              <th>Address</th>
-                              <th>Telephone</th>
+                              <th>Other Assets Aside from Collateral</th>
+                              <th>Location/Description</th>
+                              <th>Size (sqm) and Estimated</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <td><input id="user_trade_cust_name" name="user[trade_cust_name]" size="30" type="text" value=""></td>
-                              <td><input id="user_trade_cust_add" name="user[trade_cust_add]" size="30" type="text" value=""></td>
-                              <td><input id="user_trade_cust_tel" name="user[trade_cust_tel]" size="30" type="text" value=""></td>
-                            </tr>
-                            <tr>
-                              <td><input id="user_trade_cust_name" name="user[trade_cust_name]" size="30" type="text" value=""></td>
-                              <td><input id="user_trade_cust_add" name="user[trade_cust_add]" size="30" type="text" value=""></td>
-                              <td><input id="user_trade_cust_tel" name="user[trade_cust_tel]" size="30" type="text" value=""></td>
+                              <td><input id="user_assets_name" name="user[assets_name]" size="30" type="text" value=""></td>
+                              <td><input id="user_assets_add" name="user[assets_add]" size="30" type="text" value=""></td>
+                              <td><input id="user_assets_size" name="user[assets_size]" size="30" type="text" value=""></td>
                             </tr>
                           </tbody>
                         </table>
-                        <button id="btnAddTradeCustRow" class="btn btn-primary">
+                        <button id="btnAddAssetsRow" class="btn btn-primary">
                           Add Row
                         </button>
                         <br>
                         <script>
-                        $("#btnAddTradeCustRow").click(function () {
-                          $("#tradeCustTable").append('<tr><td><input id="user_trade_cust_name" name="user[trade_cust_name]" size="30" type="text" value=""></td><td><input id="user_trade_cust_add" name="user[trade_cust_add]" size="30" type="text" value=""></td><td><input id="user_trade_cust_tel" name="user[trade_cust_tel]" size="30" type="text" value=""></td></tr>');
+                        $("#btnAddAssetsRow").click(function () {
+                          $("#assetsTable").append('<tr><td><input id="user_assets_name" name="user[assets_name]" size="30" type="text" value=""></td><td><input id="user_assets_add" name="user[assets_add]" size="30" type="text" value=""></td><td><input id="user_assets_size" name="user[assets_size]" size="30" type="text" value=""></td></tr>');
                         });
                         </script>
                       </div>
@@ -840,7 +825,7 @@
                 <div>
                   <div class="col-xs-6 pull-left">
                     <button target="personal"  class="button_toggle btn btn-primary btn-large pull-left">
-                      Back: Personal Information <i class="fa fa-arrow-left"></i>
+                      <i class="fa fa-arrow-left"> Back: Personal Information</i>
                     </button>
                   </div>
                   <div class="col-xs-6 pull-right">
@@ -853,10 +838,220 @@
               </div>
               <!--End of Second Step: Account References-->
 
+            <!--Third Step: Loan Details-->
+              <div id="loanshow" class="loan_panel">
+                <div class="panel">
+                  <div class="panel-header">
+                    Third Step: Loan Details
+                  </div>
+                  <!--Loan Details-->
+                  <div class="panel space-4">
+                    <!-- <div class="panel-header">
+                      Loan Details
+                    </div> -->
+                    <div class="panel-body">
+                      <div class="row row-condensed space-4">
+                        <label class="text-right col-sm-3" for="user_loan_amount">
+                          Amount Applied
+                        </label>
+                        <div class="col-sm-9">
+                          <div>
+                            <input id="user_loan_amount" name="user[loan_amount]" size="30" type="text" value="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row row-condensed space-4">
+                        <label class="text-right col-sm-3" for="user_collateral">
+                          Collateral Motor vehicle
+                        </label>
+                        <div class="col-sm-9">
+                          <div>
+                            <input type="radio" name="user_collateral" id="user_collateral">Sedan
+                            <br>
+                            <input type="radio" name="user_collateral" id="user_collateral">Motorcycle
+                            <br>
+                            <input type="radio" name="user_collateral" id="user_collateral">AUV/SUV
+                            <br>
+                            <input type="radio" name="user_collateral" id="user_collateral">Truck
+                            <br>
+                            <input type="radio" name="user_collateral" id="user_collateral" value="other_collateral">Others
+                            <br>
+                            <div id="other_collateral" class="other_collateral">
+                              <br>
+                              <input id="collateral_other" name="collateral[other]" placeholder="specify" size="30" type="text">
+                            </div>
+                            <script>
+                            $(document).ready(function() {
+                              $("div.other_collateral").hide();
+                              $("input[name$='user_collateral']").click(function() {
+                                  var test = $(this).val();
+                                  $("div.other_collateral").hide();
+                                  $("#" + test).show();
+                              });
+                            });
+                            </script>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row row-condensed space-4">
+                        <label class="text-right col-sm-3" for="user_collateral">
+                          Condition
+                        </label>
+                        <div class="col-sm-9">
+                          <div>
+                            <input type="radio" name="user_collateral_condition" id="user_collateral_condition">Brand New
+                            <br>
+                            <input type="radio" name="user_collateral_condition" id="user_collateral_condition">Second Hand
+                            <br>
+                            <input type="radio" name="user_collateral_condition" id="user_collateral_condition">Commercial/Local
+                            <br>
+                            <input type="radio" name="user_collateral_condition" id="user_collateral_condition">Surplus/Imported
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row row-condensed space-4">
+                        <label class="text-right col-sm-3" for="user_loan_amount">
+                          Vehicle Make (specify)
+                        </label>
+                        <div class="col-sm-9">
+                          <div>
+                            <input id="user_vehicle_make" name="user[vehicle_make]" size="30" type="text" value="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End of Loan Details-->
+
+                  <!--Primary User-->
+                  <div class="panel space-4">
+                    <div class="panel-body">
+                      <div class="row row-condensed space-4">
+                        <label class="text-right col-sm-3" for="user_first_name">
+                          Name of Primary User if Different from Applicant
+                        </label>
+                        <div class="col-sm-9">
+                          <div class="col-sm-4 col-md-4">
+                            <div>
+                              <label for="primary_user_last_name">
+                                Last Name
+                              </label>
+                            </div>
+                            <div>
+                              <input id="primary_user_last_name" name="primary_user[last_name]" size="30" type="text" value="">
+                            </div>
+                          </div>
+                          <div class="col-sm-4 col-md-4">
+                            <div>
+                              <label for="primary_user_first_name">
+                                First Name
+                              </label>
+                            </div>
+                            <div>
+                              <input id="primary_user_first_name" name="primary_user[first_name]" size="30" type="text" value="">
+                            </div>
+                          </div>
+                          <div class="col-sm-4 col-md-4">
+                            <div>
+                              <label for="primary_user_middle_name">
+                                Middle Name
+                              </label>
+                            </div>
+                            <div>
+                              <input id="primary_user_middle_name" name="primary_user[middle_name]" size="30" type="text" value="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row row-condensed space-4">
+                        <label class="text-right col-sm-3" for="user_first_name">
+                          Relationship to Applicant
+                        </label>
+                        <div class="col-sm-9">
+                          <input id="primary_user_relationship" name="primary_user[relationship]" size="30" type="text" value="">
+                        </div>
+                      </div>
+                      <div class="row row-condensed space-4">
+                        <label class="text-right col-sm-3" for="user_first_name">
+                          Place of Use
+                        </label>
+                        <div class="col-sm-9">
+                          <input id="primary_user_place_of_use" name="primary_user[place_of_use]" size="30" type="text" value="">
+                        </div>
+                      </div>
+                      <div class="row row-condensed space-4">
+                        <label class="text-right col-sm-3" for="user_first_name">
+                        </label>
+                        <div class="col-sm-9">
+                          <input type="radio" name="user_primary_use_01" id="user_primary_use_01">REM
+                          <br>
+                          <input type="radio" name="user_primary_use_01" id="user_primary_use_01">Residential
+                          <br>
+                          <input type="radio" name="user_primary_use_01" id="user_primary_use_01">Commercial
+                          <br>
+                          <input type="radio" name="user_primary_use_01" id="user_primary_use_01">Residential/Commercial
+                          <br>
+                          <input type="radio" name="user_primary_use_01" id="user_primary_use_01">Agricultural
+                          <br>
+                          <hr>
+                          <br>
+                          <input type="radio" name="user_primary_use_01" id="user_primary_use_01">Clean Loan/No Collateral
+                          <br>
+                          <hr>
+                          <br>
+                          <input type="radio" name="user_primary_use_01" id="user_primary_use_01">Cash Loan
+                          <br>
+                          <input type="radio" name="user_primary_use_01" id="user_primary_use_01">Business
+                          <br>
+                          <input type="radio" name="user_primary_use_01" id="user_primary_use_01">Mixed
+                          <br>
+                          <input type="radio" name="user_primary_use_01" id="user_primary_use_01">Purchased Motor Vehicle
+                          <br>
+                          <input type="radio" name="user_primary_use_01" id="user_primary_use_01" value="primary_personal_use">Personal Use
+                          <br>
+                          <div id="primary_personal_use" class="primary_use">
+                            <br>
+                            <input id="primary_use_personal" name="primary_use[personal]" placeholder="specify" size="30" type="text">
+                          </div>
+                          <script>
+                          $(document).ready(function() {
+                            $("div.primary_use").hide();
+                            $("input[name$='user_primary_use_01']").click(function() {
+                                var test = $(this).val();
+                                $("div.primary_use").hide();
+                                $("#" + test).show();
+                            });
+                          });
+                          </script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End of Primary User-->
+
+                </div>
+                <!--Toggle Buttons-->
+                <div>
+                  <div class="col-xs-6 pull-left">
+                    <button target="account"  class="button_toggle btn btn-primary btn-large pull-left">
+                      <i class="fa fa-arrow-left"> Back: Account References</i>
+                    </button>
+                  </div>
+                  <div class="col-xs-6 pull-right">
+                    <button class="button_toggle btn btn-primary btn-large pull-right">
+                      Apply Loan <i class="fa fa-floppy-o"></i>
+                    </button>
+                  </div>
+                </div>
+                <!--End of Toggle Buttons-->
+              </div>
+              <!--End of Second Step: Account References-->
+
 
           </div>
         </div>
         <script>
+        $('#loanshow').hide();
         $('#accountshow').hide();
 
         jQuery(function(){
@@ -885,7 +1080,7 @@
       <div class="container">
           <div class="row">
               <div class="col-md-6 text-left">
-                  <span class="copyright">&copy; 2016 privacy policy</span>
+                  <span class="copyright">andcopy; 2016 privacy policy</span>
                   <ul class="list-inline social-button">
                       <li><a class="social" href="#"><i class="fa fa-facebook"></i></a>
                       </li>
